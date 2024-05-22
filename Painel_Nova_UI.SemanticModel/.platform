@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Painel_Nova_UI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7a05626f-b1b5-4779-9bd6-9a8a93392b32"
+  }
+}

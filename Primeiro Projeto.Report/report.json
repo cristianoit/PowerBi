@@ -1,0 +1,76 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.53\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"183L\"}}}}}]}}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"198e221c7bd2252961b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":581.9054763690922,\"y\":93.14328582145535,\"z\":2000,\"width\":688.4921230307576,\"height\":362.0105026256564,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"diabetes.Age\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(diabetes.Outcome)\"},{\"queryRef\":\"Sum(diabetes.DiabetesPedigreeFunction)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"diabetes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age\"},\"Name\":\"diabetes.Age\",\"NativeReferenceName\":\"Soma de Age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Outcome\"}},\"Function\":0},\"Name\":\"Sum(diabetes.Outcome)\",\"NativeReferenceName\":\"Soma de Outcome\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"DiabetesPedigreeFunction\"}},\"Function\":0},\"Name\":\"Sum(diabetes.DiabetesPedigreeFunction)\",\"NativeReferenceName\":\"Soma de DiabetesPedigreeFunction\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Outcome\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 362.01,
+          "width": 688.49,
+          "x": 581.91,
+          "y": 93.14,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"7bad46a68d450e78ca8c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":4.801200300075019,\"y\":479.15978994748684,\"z\":1000,\"width\":1270.39759939985,\"height\":225.65641410352586,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"diabetes.BMI\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(diabetes.Insulin)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"diabetes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"BMI\"},\"Name\":\"diabetes.BMI\",\"NativeReferenceName\":\"Contagem de BMI\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Insulin\"}},\"Function\":0},\"Name\":\"Sum(diabetes.Insulin)\",\"NativeReferenceName\":\"Média de Insulin\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Insulin\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"85D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 225.66,
+          "width": 1270.40,
+          "x": 4.80,
+          "y": 479.16,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"b7502e3365878c33f980\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":93.14328582145535,\"z\":0,\"width\":573.2633158289572,\"height\":362.0105026256564,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineStackedColumnComboChart\",\"projections\":{\"Y2\":[{\"queryRef\":\"Sum(diabetes.Insulin)\"}],\"Y\":[{\"queryRef\":\"Sum(diabetes.Glucose)\"}],\"Category\":[{\"queryRef\":\"diabetes.Age\",\"active\":true}],\"Tooltips\":[{\"queryRef\":\"Median(diabetes.Outcome)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"diabetes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Insulin\"}},\"Function\":0},\"Name\":\"Sum(diabetes.Insulin)\",\"NativeReferenceName\":\"Soma de Insulin\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Glucose\"}},\"Function\":0},\"Name\":\"Sum(diabetes.Glucose)\",\"NativeReferenceName\":\"Soma de Glucose\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Age\"},\"Name\":\"diabetes.Age\",\"NativeReferenceName\":\"Soma de Age\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Outcome\"}},\"Function\":6},\"Name\":\"Median(diabetes.Outcome)\",\"NativeReferenceName\":\"Mediana de Outcome\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Glucose\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 362.01,
+          "width": 573.26,
+          "x": 0.00,
+          "y": 93.14,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d70bfd8ae5b0cffc525d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":4.801200300075019,\"y\":7.681920480120029,\"z\":3000,\"width\":1265.5963990997748,\"height\":77.7794448612153,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"\"}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"PRIMEIRO PROJETO POWER BI\",\"textStyle\":{\"fontSize\":\"24pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0}}}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.4}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 77.78,
+          "width": 1265.60,
+          "x": 4.80,
+          "y": 7.68,
+          "z": 3000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
